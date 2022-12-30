@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>The Element Object</h1>
+<h2>The innerHTML Property</h2>
+<input type="text" id="name" onclick="myFunction()">
+<button  onclick="myFunction()">click</button>
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  var a = document.getElementById("name").value;
+ // document.getElementsByTagName.innerText = a;
+  document.getElementById("demo").innerText = a;
+// document.createElement("h1")
+// document.appendChild("h1").innerText = a;
+//   const para = document.createElement("p");
+// para.innerText = "This is a paragraph.";
+
+// const meihunna = document.createElement("h2");
+// meihunna.innerText = "my name is himanshu";
+
+// // Append to body:
+// document.body.appendChild(para);
+// document.body.appendChild(meihunna);
+}
+</script>
+
+</body>
+</html> 

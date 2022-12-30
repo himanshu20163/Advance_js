@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+       .main_container{
+          width:100vw;
+          height:1000px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          border:2px solid red;
+       }
+       .child{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+         margin:10px;
+         height:40px;
+         width:200px;
+         border:2px solid green;
+         border-radius: 8px;
+       }
+    </style>
+</head>
+<body>
+    
+    <div class="main_container">
+        <div class="child" >
+          !st Child 
+        </div>
+        <div class="child">
+            2st Child 
+          </div>
+          <div class="child">
+            3st Child 
+          </div>
+          <div class="child">
+            4st Child 
+          </div>
+          <div class="child">
+            5st Child 
+          </div>
+          <div class="child">
+            6st Child 
+          </div>
+          <div class="child">
+            7st Child 
+          </div>
+          <div class="child">
+            8st Child 
+          </div>
+          <div class="child">
+            9st Child 
+          </div>
+          <div class="child">
+            10st Child 
+          </div>
+          <div class="child">
+            11st Child 
+          </div>
+          <div class="child">
+            12st Child 
+          </div>
+          <div class="child">
+            13st Child 
+          </div>
+          <div class="child">
+            14st Child 
+          </div>
+          <div class="child">
+            15st Child 
+          </div>
+          <div class="child">
+            16st Child 
+          </div>
+          <div class="child">
+            17st Child 
+          </div>
+          <button onclick="name()" >Submit</button>
+    </div>
+    <script>
+        function name(){
+            let a = document.getElementsByClassName("child");
+        for(let i=0;i<a.length;i++){
+            if(i%2==1){
+                a[i].setAttribute("style","background:lime ");
+            }
+        }
+        a[1].setAttribute("style","background:blue");
+        a[9].setAttribute("style","background:green");
+        a[17].setAttribute("style","background:pink");
+        }
+        
+    </script>
+    
+</body>
+</html>
