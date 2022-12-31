@@ -1,28 +1,38 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <style>
+      body{
+        margin:0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .container{
+        width:100%;
+        height:100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
 <body>
-<h1>The Element Object</h1>
-<h2>The innerHTML Property</h2>
-<input type="text" id="name" onclick="myFunction()">
-<button  onclick="myFunction()">click</button>
-<p id="demo"></p>
+<!-- <h1>The Element Object</h1>
+<h2>The innerHTML Property</h2> -->
+<div class="container">
+  <input type="text" id="name" onclick="myFunction()">
+  <button  onclick="myFunction()" style="margin-top:20px">click</button>
+  <p id="demo"></p>
+  
+</div>
 
 <script>
 function myFunction() {
   var a = document.getElementById("name").value;
  // document.getElementsByTagName.innerText = a;
-  document.getElementById("demo").innerText = a;
-// document.createElement("h1")
-// document.appendChild("h1").innerText = a;
-//   const para = document.createElement("p");
-// para.innerText = "This is a paragraph.";
-
-// const meihunna = document.createElement("h2");
-// meihunna.innerText = "my name is himanshu";
-
-// // Append to body:
-// document.body.appendChild(para);
-// document.body.appendChild(meihunna);
+ document.getElementById("demo").setAttribute("style","color:green;font-weight:bold")
+ document.getElementById("demo").innerText = a;
 }
 </script>
 
