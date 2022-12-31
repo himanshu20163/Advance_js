@@ -12,8 +12,8 @@
             padding: 0;
         }
        .main_container{
-          width:100vw;
-          height:1000px;
+          width:100%;
+          height:1200px;
           display: flex;
           flex-direction: column;
           justify-content: center;
@@ -86,19 +86,23 @@
           <div class="child">
             17st Child 
           </div>
-          <button onclick="name()" >Submit</button>
+          <button onclick="him()" style="height:50px;width:200px">Submit</button>
     </div>
     <script>
-        function name(){
+        function him(){
             let a = document.getElementsByClassName("child");
+            
         for(let i=0;i<a.length;i++){
             if(i%2==1){
-                a[i].setAttribute("style","background:lime ");
+                a[i].setAttribute("style","background:lime ");   
             }
+            else{
+              a[1].setAttribute("style","background:blue");
+              a[9].setAttribute("style","background:green");
+              a[16].setAttribute("style","background:pink");
+            }
+
         }
-        a[1].setAttribute("style","background:blue");
-        a[9].setAttribute("style","background:green");
-        a[17].setAttribute("style","background:pink");
         }
         
     </script>
