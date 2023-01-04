@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h2 style="color:green">Geekster</h2>
+        <h5>Click on the button to add image element</h5>
+        <button onclick="hello()">Click Here</button>
+    </center>
+    
+    <script>
+        function hello() {
+            let a = document.getElementById("click")
+            var div = document.createElement("div");
+            
+            var b = document.createElement("h1")
+            var textnode = document.createTextNode("geekster");
+            var img = document.createElement("img"); 
+            img.src="geekster.jfif";
+            b.appendChild(textnode);
+            b.style="text-align:center;"
+            img.style="margin-left:600px;height:50px;width:150px;"
+
+            document.body.appendChild(b);
+            document.body.appendChild(img);
+        }
+    </script>
+</body>
+</html>
