@@ -17,13 +17,13 @@
         function hello() {
             let a = document.getElementById("click")
             var div = document.createElement("div");
-            
+            div.style="display:flex;justify-content:center;align-items:center;"
             var b = document.createElement("h1")
-            var textnode = document.createTextNode("geekster");
+            var textnode = document.createTextNode("Image Element Added");
             var img = document.createElement("img"); 
             img.src="geekster.jfif";
             b.appendChild(textnode);
-            b.style="text-align:center;"
+            b.style="text-align:center;color:green;"
             img.style="margin-left:600px;height:50px;width:150px;"
 
             document.body.appendChild(b);
