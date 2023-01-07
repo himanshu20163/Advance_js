@@ -39,24 +39,14 @@
         justify-content: center;
         align-items: center;
         box-shadow: 5px 5px 5px rgb(203, 203, 203);
+        display: none;
     }
     p{
         font-size: 40px;
      color:green;
     }
 </style>
-
-</HEAD>
-<BODY>
- <div id="presskey">
-    <div id="data_get">
-        <h2 id="keydata">Press Any Keyboard</h2>
-    </div>
-    <div id="keycode">
-        <h2 id="key_code"></h2>
-    </div>
- </div>
- <script language="JavaScript" defer>
+<script language="JavaScript" defer>
 document.onkeydown = checkKeycode
 
 function checkKeycode(e) {
@@ -69,12 +59,27 @@ else if (e)
     let press = document.getElementById("keydata")
     press.innerHTML = `You Pressed ` + `<p>${x}<p/>`
     //key_name.innerHTML = `${x}`
+    let key_box = document.getElementById("keycode");
+    key_box.style.display = "block"
+    key_box.style.display = "flex"
     let key_name = document.getElementById("key_code");
+    key_name.style.display = "block";
     key_name.style.fontSize="40px"
     key_name.style.color="green";
     key_name.innerHTML = `${keycode}`
 }
 </script>
 
+</HEAD>
+<BODY>
+ <div id="presskey">
+    <div id="data_get">
+        <h2 id="keydata">Press Any Keyboard</h2>
+    </div>
+    <div id="keycode">
+        <h2 id="key_code"></h2>
+    </div>
+ </div>
+ 
 </BODY>
 </HTML>
