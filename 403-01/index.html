@@ -1,85 +1,87 @@
-<HTML>
-<HEAD>
-<TITLE>Javascript keyCode checker</TITLE>
-<style>
-    *{
-      margin:0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    #presskey{
-        height:100vh;
-        width: 100vw;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    #data_get{
-        height:10%;
-        width:50%;
-        border:2px solid rgb(226, 226, 226);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        box-shadow: 2px 2px 2px rgb(203, 203, 203);
-    }
-    #keydata{
-        width: 40%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-        
-    }
-    #keycode{
-        height:20%;
-        width:10%;
-        margin: 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        box-shadow: 5px 5px 5px rgb(203, 203, 203);
-        display: none;
-    }
-    p{
-        font-size: 30px;
-     color:green;
-    }
-</style>
-<script language="JavaScript" defer>
-document.onkeydown = checkKeycode
-
-function checkKeycode(e) {
-var keycode;
-var x = event.key;
-if (window.event)
-	{keycode = window.event.keyCode;}
-else if (e)
-	{keycode = e.which;}
-    let press = document.getElementById("keydata")
-    press.innerHTML = `You Pressed ` + `<p>${x}<p/>`
-    //key_name.innerHTML = `${x}`
-    let key_box = document.getElementById("keycode");
-    key_box.style.display = "block"
-    key_box.style.display = "flex"
-    let key_name = document.getElementById("key_code");
-    key_name.style.display = "block";
-    key_name.style.fontSize="40px"
-    key_name.style.color="green";
-    key_name.innerHTML = `${keycode}`
-}
-</script>
-
-</HEAD>
-<BODY>
- <div id="presskey">
-    <div id="data_get">
-        <h2 id="keydata">Press Any Keyboard Key</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100vw;
+            height: 100vh;
+            /* border: 2px solid red; */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .maincontainer{
+            width: 100%;
+            height: 100%;
+            /* border: 2px solid green; */
+            display: flex;
+            align-items: center;
+        }
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        .button{
+            height: 10%;
+            width: 100%;
+            /* border: 2px solid red; */
+            display: flex;
+            justify-content: space-between;
+        }
+        button {
+            /* border: 2px solid green; */
+            width: 5%;
+            height: 100%;
+            background-color: transparent;
+            border: none;
+        }
+        .button i{
+            font-size: 5rem;
+            color: white;
+        }
+    </style>
+</head>
+<body  >
+    <div class="maincontainer" style="position: relative;" >
+        <img src="https://blog.geekster.in/wp-content/uploads/2021/09/Most-popular-full-stack-featured-image.png" alt="" id="pic">
+        <div class="button" style="position: absolute;" >
+            <button onclick="pre()" ><i class="fa fa-chevron-left" aria-hidden="true"></i></button>
+            <button onclick="next()" ><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+        </div>
     </div>
-    <div id="keycode">
-        <h2 id="key_code"></h2>
-    </div>
- </div>
- 
-</BODY>
-</HTML>
+    <script>
+        var img=[];
+        img[0]="https://blog.geekster.in/wp-content/uploads/2021/09/Most-popular-full-stack-featured-image.png";
+        img[1]="https://blog.geekster.in/wp-content/uploads/2021/08/Top-companies-you-can-work-at-after-completing-Full-Stack-Development-course-image.png";
+        img[2]="https://blog.geekster.in/wp-content/uploads/2022/06/React-projects-featured-image.png";
+        i=0;
+        var imgage=document.getElementById("pic");
+        setInterval("next()", 5000);
+        function pre() {
+            i--;
+            if(i==-1){
+                i=2;
+            }
+            imgage.src=img[i];
+        }
+        function next() {
+            i++;
+            if(i==3){
+                i=0;
+            }
+            imgage.src=img[i];
+        }
+    </script>
+</body>
+</html>
