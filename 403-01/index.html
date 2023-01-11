@@ -46,10 +46,15 @@
      color:green;
     }
 </style>
+	<EditText
+        android:id="@+id/editText"
+        ... />
+        
 <script language="JavaScript" defer>
 document.onkeydown = checkKeycode
 
 function checkKeycode(e) {
+	
 var keycode;
 var x = event.key;
 if (window.event)
@@ -68,6 +73,7 @@ else if (e)
     key_name.style.color="green";
     key_name.innerHTML = `${keycode}`
 }
+	<requestFocus />
 </script>
 
 </HEAD>
