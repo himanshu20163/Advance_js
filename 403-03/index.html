@@ -186,7 +186,7 @@
         let no_of_people = document.getElementById("person").value
         let result = (bill_amount*select_value)/no_of_people;
         let ans = result/100;
-        let out = parseFloat(x).toFixed(1);
+        let out = parseFloat(ans).toFixed(1);
         let box = document.getElementById("result")
         box.innerHTML = `TIP AMOUNT  <br/> $ ${out} each`;
        
