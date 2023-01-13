@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    *{
+        margin:0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .wrapper{
+        height:100vh;
+        width:100vw;
+        display: flex;
+        justify-content: center;
+        padding-top:3%;
+        padding-bottom: 3%;
+        background-color: bisque;
+        background-image: url('https://cdn.winsightmedia.com/platform/files/public/2021-12/background/fries.gif');
+        z-index: 55;
+    }
+    #cal_box{
+        box-shadow: 0px 0px 1px rgb(194, 194, 194);
+        height:100%;
+        width:30%;
+        background-color: rgb(255, 255, 255);
+        border-radius: 10px;
+
+    }
+    .head{
+        height:20%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    h1{
+        color:brown;
+    }
+    hr{
+        position: relative;
+       left: 20px;
+        width:90%;   
+    }
+    form{
+        display: flex;
+        flex-direction: column;
+        padding: 50px;
+        height:80%;
+    }
+    input{
+        margin-top: 10px;
+        height:40px;
+    }
+    label{
+        font-size: 20px;
+    }
+    .bill{
+        height:90px;
+    }
+    .bill_services{
+        height:90px;
+    }
+    select.form-select.form-select-lg {
+        margin-top: 10px;
+    height: 35px;
+    font-size: 15px;
+    font-weight: 500;
+   }
+   button{
+    outline: 50px;
+    font-size: 20px;
+    height:50px;
+    color:white;
+    background-color: brown;
+    cursor: pointer;
+   }
+   @media only screen and (max-width: 1200px){
+    #cal_box{
+        width:30%;
+        height:100%;
+    }
+   }
+   @media only screen and (max-width: 900px){
+    #cal_box{
+        width:30%;
+        height:85%;
+    }
+    .head{
+        height: 15%;
+    }
+    h1{
+        font-size: 15px;
+    }
+    form {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    height: 80%;
+     }
+     input {
+    margin-top: 15px;
+    height: 25px;
+    }
+    button{
+        margin-top:15px;
+    }
+   }
+
+   @media only screen and (max-width: 768px){
+    #cal_box{
+        width:30%;
+        height:65%;
+    }
+    .head{
+        height: 15%;
+    }
+    h1{
+        font-size: 15px;
+    }
+    form {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    height: 80%;
+     }
+     input {
+    margin-top: 15px;
+    height: 25px;
+    width: 50%;
+    }
+    button{
+        margin-top:15px;
+    }
+    label{
+        font-size: 18px;
+    }
+   }
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+    <div id="cal_box">
+        <div class="head">
+            <h1>Charles 's Tip<br> Calculator</h1>
+        </div>
+        <hr/>
+        <form action="">
+            <div class="bill">
+                <label for="">How much was your bill?</label>
+                <input type="text" name="" id="money" value="100"></label>
+            </div>
+            <div class="bill_services">
+                <label for="">How was your service?</label>
+                <div class="mb-3">
+                    <select class="form-select form-select-lg" name="" id="foods_percetange">
+                        <option selected>-- Choose an option --</option>
+                        <option value="20">20% - Good</option>
+                        <option value="30">30% - Outstanding</option>
+                        <option value="15">15% - it was okay</option>
+                        <option value="10">10% - Bad</option>
+                        <option value="5">5% - Terrible</option>
+                    </select>
+                </div>
+            </div>
+            <div class="bill">
+                <label for="">Total no of person sharing the bill?</label>
+                <input type="text" name="" id="person" value="100">
+            </div>
+           
+            <button type="button" onclick="total_amt()">CALCULATE</button>
+            <br/>
+           <center> <h3 id="result">Total Amount</h3></center>
+        </form>
+       
+       </div>
+    </div>
+</body>
+<script>
+    function total_amt() {
+        let bill_amount = document.getElementById("money").value;
+        let select_value = document.getElementById("foods_percetange").value
+        let no_of_people = document.getElementById("person").value
+        let result = (bill_amount*select_value)/no_of_people;
+        let ans = result/100;
+        let out = parseFloat(x).toFixed(1);
+        let box = document.getElementById("result")
+        box.innerHTML = `TIP AMOUNT  <br/> $ ${out} each`;
+       
+       console.log(box);
+        //body.document.appendChild(data);
+       // console.log(result/100);
+    }
+
+    </script>
+</html>
