@@ -16,8 +16,8 @@
         align-items: center;
     }
     #data_get{
-        height:10%;
-        width:50%;
+        height:20%;
+        width:30%;
         border:2px solid rgb(226, 226, 226);
         display: flex;
         justify-content: center;
@@ -25,9 +25,9 @@
         box-shadow: 2px 2px 2px rgb(203, 203, 203);
     }
     #keydata{
-        width: 40%;
+        width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
         
     }
@@ -38,7 +38,8 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        box-shadow: 5px 5px 5px rgb(203, 203, 203);
+        box-shadow: 5px 5px 20px 5px rgb(128, 128, 128);
+        border-radius: 5px;
         display: none;
     }
     p{
@@ -46,12 +47,10 @@
      color:green;
     }
 </style>
-        
 <script language="JavaScript" defer>
 document.onkeydown = checkKeycode
 
 function checkKeycode(e) {
-	
 var keycode;
 var x = event.key;
 if (window.event)
@@ -59,10 +58,10 @@ if (window.event)
 else if (e)
 	{keycode = e.which;}
     let press = document.getElementById("keydata")
-    press.innerHTML = `You Pressed ` + `<p>${x}<p/>`
+    press.innerHTML = `You Pressed ` + `<p>&nbsp;${x}<p/>`
     //key_name.innerHTML = `${x}`
     let key_box = document.getElementById("keycode");
-    key_box.style.display = "block"
+   // key_box.style.display = "block"
     key_box.style.display = "flex"
     let key_name = document.getElementById("key_code");
     key_name.style.display = "block";
@@ -76,7 +75,7 @@ else if (e)
 <BODY>
  <div id="presskey">
     <div id="data_get">
-        <h2 id="keydata">Press Any Keyboard Key</h2>
+        <h2 id="keydata">Press Any Keyboard</h2>
     </div>
     <div id="keycode">
         <h2 id="key_code"></h2>
