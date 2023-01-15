@@ -12,6 +12,7 @@ const clear = document.getElementById("show_data_container")
 
 function population_data() {
   clear.innerHTML = " "
+  title.innerText = "10 most populated countries in world"
   for (let i = 0; i < 10; i++) {
     const firstdiv = document.createElement("div");
     firstdiv.style.display = "flex";
@@ -50,6 +51,7 @@ function population_data() {
 }
 function language_data() {
   clear.innerHTML = " "
+  title.innerText = "10 most populated languages in world"
 
   const languagesArray = []
 
