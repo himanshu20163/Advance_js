@@ -1,24 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="index.css">
-    <script defer src="data.js"></script>
-    <script defer src="index.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script defer src="data.js"></script>
+  <script defer src="index.js"></script>
 </head>
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .head {
+    width: 100%;
+    height: 15%;
+    padding: 30px;
+  }
+
+  h1 {
+    color: orange;
+    text-align: center;
+  }
+
+  #main_container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  #main_population {
+    margin: 1%;
+  }
+
+  p {
+    padding-bottom: 20px;
+  }
+
+  button {
+    background-color: orange;
+    padding: 10px;
+    width: 120px;
+    border: none;
+    border-radius: 4px;
+  }
+
+  #main_Language {
+    margin: 1%;
+  }
+</style>
+
 <body>
-    <h1>WORLD COUNTRIES LIST</h1>
-    <p id="numberOfCountries"></p>
-    <p id="numberOfSearchResults"></p>
-    <div class="buttonContainer">
-        <button id="startingWordButton" onclick="startingSearchFunction()">Starting Word</button>
-        <button id="searchWithAnyWordButton" onclick="searchAnyWordFunction()">Search With Any Word</button>
+  <div class="head">
+    <h1>World Countries data</h1>
+    <center>
+      <p id="para">g</p>
+    </center>
+  </div>
+
+  <div id="main_container">
+    <div id="main_population">
+      <button id="population" onclick="population_data()">POPULATION</button>
     </div>
-    onkeyup="startingSearchFunction()"
-    <input  type="text" name="countryName" id="countryNameInput" placeholder="Search your country !!!">
-    <div id="countryCardContainer" style="display: flex; flex-wrap: wrap; justify-content: center;"></div>
+    <div id="main_Language">
+      <button id="language" onclick="language_data()">LANGUAGES</button>
+    </div>
+  </div>
+  <center>
+    <p id="graphTitle">10 Most Spoken language in the world</p>
+  </center>
+  <div id="show_data">
+    <div id="show_data_container">
+
+    </div>
+  </div>
+  <script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script>
 </body>
+
 </html>
