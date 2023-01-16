@@ -1,0 +1,128 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h1{
+    /* border: 2px solid green; */
+    margin: 1rem;
+    opacity: 1;
+    color: white;
+    font-size: 50px;
+}
+.card{
+    background-color: pink;
+    background-image: url('1.jpg');
+    background-size:  cover;  
+}
+#container{
+  height: 450px;
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding:20px;
+  background-image: url('7130204.jpg');
+  background-repeat:no-repeat;
+  background-size: cover;
+}
+#numberOfCountries,
+#numberOfSearchResults {
+    /* border: 2px solid green; */
+    margin: .5rem;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+p{
+    color:white;
+    font-size:22px;
+    font-weight: bold;
+}
+.buttonContainer{
+    /* border: 2px solid green; */
+    margin: 10px;
+    display: flex;
+    width: 50%;
+    justify-content: center;
+}
+
+button{
+    margin:10px;
+}
+.buttonContainer button{
+    padding: .5rem 1rem;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #895be6;
+    transition: all 0.3s ease-in-out;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+button:hover{
+    transform: scale(1.1);
+}
+
+input{
+    border: none;
+    padding: 1rem;
+    border-radius: 50px;
+    outline: none;
+    width: 50%;
+    box-shadow: 0 2px 2px black;
+}
+
+.card{
+    /* border: 2px solid red; */
+    width: 15vw;
+    padding: 2rem 1rem;
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px grey;
+}
+@media only screen and (max-width: 768px){
+   h1{
+    margin: 1rem;
+    opacity: 1;
+    color: white;
+    font-size: 25px;
+   }
+   #numberOfCountries,
+   #numberOfSearchResults {
+    /* border: 2px solid green; */
+    margin: .3rem;
+    color: white;
+    font-weight: bold;
+    font-size: 5px;
+}
+}
+@media only screen and (max-width: 540px){
+     #numberOfCountries,
+   #numberOfSearchResults {
+    /* border: 2px solid green; */
+    margin: .1rem;
+    color: white;
+    font-weight: bold;
+    font-size: 5px;
+    height:10px;
+   }
+
+    }
