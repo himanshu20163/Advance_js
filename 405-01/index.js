@@ -37,6 +37,7 @@ function population_data() {
     percentagediv.style.height = "38px";
     percentagediv.style.margin = "5px";
     percentagediv.innerHTML = `${percent.toFixed(2)}%`;
+    percentagediv.innerText = "";
     pdiv.appendChild(percentagediv);
     pdiv.style.width = "30%";
     firstdiv.appendChild(pdiv);
