@@ -1,0 +1,59 @@
+body{
+    background-color: black;
+    padding: 10px;
+}
+h1{
+    color: white;
+}
+table {
+    width: 100%;
+}
+#tableData {
+    background: aliceblue;
+    border: 2px solid #9d5a5a;
+    border-radius: 10px;
+}
+ .tablerow{
+    background-color:#cfcfcf;
+}
+
+td{
+    color: rgb(0, 0, 0);
+    padding-left: 30px;
+
+}
+input{
+    width:20%;
+    height: 20%;
+    padding: 8px;
+    box-shadow: 0px 4px 0px #b9d334f0;
+    border-radius: 5px;
+    border: none;
+}
+#emojiIcon{
+    width:15%;
+    height:20%;
+    font-size:50px;
+    color: white;
+}
+#emojiTags{
+   font-size: 22px;
+}
+#emojiname{
+    font-size: 22px;
+}
+#container{
+    margin-top: 50px;
+}
+button{
+    height: 35px;
+    width: 10%;
+    box-shadow: 0px 4px 0px #b9d334f0;
+    border-radius: 5px;
+    border: none;
+}
+button:hover{
+  background-color: burlywood;
+  scale:calc(1.1);
+  cursor: pointer;
+}
