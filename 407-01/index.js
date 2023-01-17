@@ -1,3 +1,16 @@
+const tagsArray = []
+emojiList.map((ele) => {
+                tagsArray.push(ele)
+                table.innerHTML += `
+                    <tr class="tablerow">
+                        <td id="emojiIcon">${ele.emoji}</td>
+                        <td id="emojiTags">${ele.aliases}</td>
+                        <td id="emojiname">${ele.description}</td>
+                    </tr>
+                `
+            }
+            
+        })
 function searchEmoji() {
     const table = document.getElementById("tableData")
     table.innerHTML = ""
