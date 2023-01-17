@@ -55,5 +55,4 @@ button{
 button:hover{
   background-color: burlywood;
   scale:calc(1.1);
-  cursor: pointer;
 }
