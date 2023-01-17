@@ -1,4 +1,3 @@
-
 function searchEmoji() {
     const table = document.getElementById("tableData")
     table.innerHTML = ""
@@ -17,6 +16,7 @@ function searchEmoji() {
             }
             
         })
+        
     }
    
 
@@ -31,7 +31,7 @@ function searchEmojiKeyup() {
                     tagsArray.push(ele)
                     table.innerHTML += `
                     <tr class="tablerow">
-                        <td id="emojiIcon">${ele.emoji}</td>
+                        <td id="emojiIcon" colspan="3">${ele.emoji} </td>
                         <td id="emojiTags">${ele.aliases}</td>
                         <td id="emojiname">${ele.description}</td>
                     </tr>
