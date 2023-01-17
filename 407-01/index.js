@@ -21,15 +21,7 @@ function searchEmoji() {
     const table = document.getElementById("tableData")
     table.innerHTML = ""
     const input = document.getElementById("input").value
-    const tagsArray = []
-    if(input == ""){
-        table.innerHTML =`
-                            <tr>
-                            <td id="p">Please Enter Emoji Name Here!!!!!</td>
-                            </tr>   
-                        `  
-    }
-    else{
+    const tagsArray = [];
         emojiList.map((ele) => {
             if (ele.tags.includes(input)) {
                 tagsArray.push(ele)
@@ -52,15 +44,7 @@ function searchEmojiKeyup() {
     const table = document.getElementById("tableData")
     table.innerHTML = ""
     const input = document.getElementById("input").value
-    const tagsArray = []
-    if(input == ""){
-        table.innerHTML =`
-                            <tr>
-                            <td id="p">Please Enter Emoji Name Here!!!!!</td>
-                            </tr>   
-                        `  
-    }
-    else{
+    const tagsArray = [];
         emojiList.map((ele) => {
             ele.tags.map((element) => {
                 if (element.startsWith(input)) {
