@@ -1,5 +1,10 @@
-const tagsArray = []
-emojiList.map((ele) => {
+function myFunction(){
+   const table = document.getElementById("tableData")
+    table.innerHTML = ""
+    const input = document.getElementById("input").value
+    const tagsArray = []
+    emojiList.map((ele) => {
+            if (ele) {
                 tagsArray.push(ele)
                 table.innerHTML += `
                     <tr class="tablerow">
@@ -11,6 +16,7 @@ emojiList.map((ele) => {
             }
             
         })
+}
 function searchEmoji() {
     const table = document.getElementById("tableData")
     table.innerHTML = ""
