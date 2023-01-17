@@ -12,9 +12,13 @@ table {
     background: aliceblue;
     border: 2px solid #9d5a5a;
     border-radius: 10px;
+    width: auto;
+    height: 50px;
 }
+
  .tablerow{
     background-color:#cfcfcf;
+    width: auto;
 }
 
 td{
@@ -37,9 +41,11 @@ input{
     color: white;
 }
 #emojiTags{
+    width: 55%;
    font-size: 22px;
 }
 #emojiname{
+    width: 75%;
     font-size: 22px;
 }
 #container{
@@ -55,4 +61,13 @@ button{
 button:hover{
   background-color: burlywood;
   scale:calc(1.1);
+}
+#blank_emojii{
+    width: 15%;
+    background-color: wheat;
+}
+.box{
+    background-color: #9d5a5a;
+    height: 100px;
+    width: 100px;
 }
