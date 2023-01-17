@@ -33,7 +33,6 @@ function population_data() {
     const percent = (sortedData[i].population / totalPopulation) * 100;
     percentagediv.style.width = `${percent}%`;
     percentagediv.style.backgroundColor = "orange";
-    percentagdiv.style.color="orange";
     percentagediv.style.border = "none";
     percentagediv.style.height = "38px";
     percentagediv.style.margin = "5px";
@@ -96,7 +95,6 @@ function language_data() {
     const percentage = (topTenValuesFronSortedArray[1] / sortedArray.length) * 100
     percentageDiv.style.width = `${percentage}%`
     percentageDiv.style.backgroundColor = "orange"
-     percentageDiv.style.color="orange"
     percentageDiv.style.height = "fit-content"
 
     percentageDiv.innerText = `${percentage.toFixed(2)}%`
