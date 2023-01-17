@@ -35,8 +35,6 @@ function searchEmoji() {
             }
             
         })
-        
-    }
     }
    
 
@@ -61,7 +59,4 @@ function searchEmojiKeyup() {
             })
         })
     }
-    
-    
-}
 
