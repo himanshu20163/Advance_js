@@ -99,7 +99,7 @@ function language_data() {
     percentageDiv.style.height = "fit-content"
 
     percentageDiv.innerText = `${percentage.toFixed(2)}%`
-    percentagediv.innerText = "";
+    percentageDiv.innerText = "";
 
     percentDiv.appendChild(percentageDiv)
     percentDiv.style.width = "30%"
