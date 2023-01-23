@@ -90,21 +90,23 @@ function language_data() {
     countryName.innerText = topTenValuesFronSortedArray[0]
     countryName.style.width = "20%"
     oneDiv.appendChild(countryName)
+    
+    
 
     const percentDiv = document.createElement("div")
     const percentageDiv = document.createElement("div")
     const percentage = (topTenValuesFronSortedArray[1] / sortedArray.length) * 100
-    percentageDiv.style.width = `${percentage}%`
-    percentageDiv.style.backgroundColor = "orange"
-    percentageDiv.style.height = "fit-content"
-
-    percentageDiv.innerText = `${percentage.toFixed(2)}%`
+    percentageDiv.style.width = `${percent}%`;
+    percentageDiv.style.backgroundColor = "orange";
+    percentageDiv.style.border = "none";
+    percentageDiv.style.height = "38px";
+    percentageDiv.style.margin = "5px";
+    percentageDiv.innerHTML = `${percent.toFixed(2)}%`;
     percentageDiv.innerText = "";
-
-    percentDiv.appendChild(percentageDiv)
-    percentDiv.style.width = "30%"
-    oneDiv.appendChild(percentDiv)
-
+    percentDiv.appendChild(percentagediv);
+    percentDiv.style.width = "30%";
+    oneDiv.appendChild(pdiv);
+    
     const populationDiv = document.createElement("div")
     populationDiv.innerText = topTenValuesFronSortedArray[1]
     oneDiv.appendChild(populationDiv)
