@@ -96,16 +96,16 @@ function language_data() {
     const percentDiv = document.createElement("div")
     const percentageDiv = document.createElement("div")
     const percentage = (topTenValuesFronSortedArray[1] / sortedArray.length) * 100
-    percentageDiv.style.width = `${percent}%`;
+    percentageDiv.style.width = `${percentage}%`;
     percentageDiv.style.backgroundColor = "orange";
     percentageDiv.style.border = "none";
     percentageDiv.style.height = "38px";
     percentageDiv.style.margin = "5px";
-    percentageDiv.innerHTML = `${percent.toFixed(2)}%`;
+    percentageDiv.innerHTML = `${percentage.toFixed(2)}%`;
     percentageDiv.innerText = "";
-    percentDiv.appendChild(percentagediv);
+    percentDiv.appendChild(percentageDiv);
     percentDiv.style.width = "30%";
-    oneDiv.appendChild(pdiv);
+    oneDiv.appendChild(percentDiv);
     
     const populationDiv = document.createElement("div")
     populationDiv.innerText = topTenValuesFronSortedArray[1]
